@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+body {
+    @apply bg-[#F4F1F1] text-white font-sans;
+}
+
+header {
+    @apply bg-[#4F7B8A] text-white w-full shadow-lg shadow-gray-500;
+
+    .container {
+        @apply flex items-center justify-between max-w-7xl mx-auto px-4 py-4;
+    
+        #profile {
+            @apply flex items-center gap-4;
+
+            img {
+                @apply h-40 aspect-square rounded-full;
+            }
+
+            h1 {
+                @apply text-4xl ;
+            }
+        }
+
+        nav ul {
+            @apply flex gap-8;
+
+            a {
+                @apply text-lg hover:text-gray-300 transition-colors duration-300;
+            }
+        }
+    }
+}
+
+main {
+    #sluzby {
+        @apply max-w-7xl mx-auto py-24 px-4;
+        @apply grid grid-cols-3 gap-16;
+
+        article {
+            @apply aspect-square overflow-hidden relative py-16 px-24;
+            @apply flex flex-col items-center justify-between;
+            background: linear-gradient(to right, #242424a2 0%, #4e4c4cc7 100%);
+            border-top: 4px solid;
+
+            img {
+                @apply absolute w-full h-full object-cover top-0 left-0 -z-10 ;
+            }
+
+            h2 {
+                @apply text-3xl mb-8 text-center;
+            }
+        }
+
+        #terapie {
+            border-color: #773F3F;
+        }
+        
+        #poradenstvi {
+            border-color: #CF5D3A;
+        }
+
+        #vzdelavani {
+            border-color: #B06F0C;
+        }
+    }
+
+    #omne {
+        background: linear-gradient(to right, #1e4d50 50%, #1e4d5020 80% ), linear-gradient(to bottom, #1e4d50 10%,transparent 20%), linear-gradient(to top, #1e4d50 0%,transparent 15%);
+        @apply relative overflow-hidden;
+
+        .container {
+            @apply max-w-7xl mx-auto pt-16 pb-4 px-4;
+
+            article {
+                @apply w-2/3 relative;
+
+                p {
+                    @apply my-5 px-6 leading-relaxed text-mauve-200;
+                }
+
+                #motto {
+                    @apply italic text-center mt-8 text-xl;
+                }
+                h2 {
+                    @apply text-4xl mb-8 px-4;
+
+                    border-left: 4px solid #45A5AA;       
+                }
+            }
+            img {
+                @apply absolute w-2/3 h-full object-cover top-8 right-0 -z-10;
+            }
+        }
+
+    }
+
+    #vzdelani {
+        background-color: #1e4d50;
+        @apply py-16;
+
+        .container {
+            @apply max-w-7xl mx-auto pb-4 px-4;
+
+            h2 {
+                @apply text-3xl mb-8 px-4 w-fit mx-auto font-light;
+                border-left: 4px solid #45A5AA;       
+            }
+            
+            ul {
+                @apply w-fit mx-auto list-none;
+                @apply flex flex-col items-start gap-2;
+
+
+            }
+        }
+
+    }
+    
+    #cenik {
+        @apply max-w-7xl mx-auto py-16 px-4 text-black;
+
+        h2 {
+            @apply text-4xl px-4;
+            @apply col-span-2;
+            border-left: 4px solid #CF5D3A;       
+        }
+
+        .container {
+            @apply grid grid-cols-2 gap-8;
+
+            .ceny {
+                @apply flex flex-col items-start gap-4;
+                
+                article {
+                    @apply flex flex-row items-center gap-4;
+                }
+                
+                h3 {
+                    @apply text-2xl;
+                }
+
+            }
+        }
+    }
+}
