@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,10 @@
             <a href="#">
                 <div id="profile">
                     <img src="./pic/profile.webp" alt="Mgr. Lucie Marcinčínová">
-                    <h1>Mgr. Lucie Marcinčínová</h1>
+                    <div id="profile-text">
+                        <h1>Mgr. Lucie Marcinčínová</h1>
+                        <p>Psycholog, psychoterapeut</p>
+                    </div>
                 </div>
             </a>
 
@@ -30,44 +33,37 @@
     <main>
         <section id="sluzby">
             <article id="terapie">
-                <h2>Online terapie</h2>
+                <h2>Psychoterapie</h2>
                 <ul>
                     <li>Individuální psychoterapie</li>
-                    <li>Párová terapie</li>
-                    <li>Krizová intervence</li>
-                    <li>Psychologická konzultace</li>
-                    <li>Poradenství</li>
+                    <li>Psychoterapie dětí a mladistvých</li>
                 </ul>
-                <img src="./pic/online.png" alt="Online terapie">
+                <img src="./pic/online.png" alt="Psychoterapie">
             </article>
 
             <article id="poradenstvi">
-                <h2>Poradenství</h2>
+                <h2>Psychologické poradenství</h2>
                 <ul>
-                    <li>Blabla</li>
-                    <li>Dodělat</li>
-                    <li>Dopsat</li>
+                    <li>Psychologická konzultace</li>
+                    <li>Školská problematika</li>
+                    <li>Práce se stresem a úzkostí</li>
+                    <li>Výchova dětí a rodičovství</li>
                 </ul>
-                <img src="./pic/online.png" alt="Poradenství">
+                <img src="./pic/online.png" alt="Psychologické poradenství">
             </article>
 
             <article id="vzdelavani">
-                <h2>Vzdělávání</h2>
-                <ul>
-                    <li>Blabla</li>
-                    <li>Dodělat</li>
-                    <li>Dopsat</li>
-                </ul>
+                <h2>Lektorování</h2>
                 <img src="./pic/online.png" alt="Vzdělávání">
             </article>
         </section>
 
         <section id="omne">
             <div class="container">
-                <img src="./pic/o_mne.png" alt="O mně, Mgr. Lucie Marcinčínová">
                 
                 <article>
                     <h2>O mně</h2>
+                    <img src="./pic/o_mne.png" alt="O mně, Mgr. Lucie Marcinčínová">
                     <p>Jsem vystudovaná psycholožka a mám plně dokončený komplexní psychoterapeutický výcvik v systemickém, na řešení orientovaném přístupu.</p>
                     <p>Pracovala jsem na pozici dětské psycholožky v Pedagogicko-psychologické poradně, mám zkušenosti i ze zařízení pro děti vyžadující okamžitou pomoc nebo doléčovacích center. Od roku 2021 poskytuji online psychoterapie pro dospělé, dospívající i děti (od 7 let).</p>
                     <p>Spolupracuji se školami v rámci vzdělávacích programů a adaptačních kurzů. Jsem členem České asociace pro psychoterapii. Od roku 2023 mám složenou zkoušku v canisterapii.</p>
@@ -83,27 +79,30 @@
             <div class="container">
                 <h2>Vzdělání</h2>
                 <ul>
-                    <li><strong>Jednooborová psychologie</strong> - Mgr. (Univerzita Palackého v Olomouci)</li>
-                    <li><strong>Umění terapie</strong> – Komplexní psychoterapeutický výcvik (G-I Institut)</li>
-                    <li><strong>Základy krizové intervence</strong> (D občanské sdružení)</li>
-                    <li><strong>Encouragement</strong> - Výcvik v dodávání odvahy (MANSIO)</li>
-                    <li><strong>Rodina během a po rozvodu pohledem rodinných terapeutů</strong> - Seminář (Mgr. Hana Heindorferová)</li>
-                    <li><strong>Děti a ztráta</strong> - Kurz (Vigvam)</li>
-                    <li><strong>Pozitivní psychoterapie: Metody a intervence</strong> (PhDr. Alena Slezáčková, Ph.D.)</li>
+                    <li><strong>Filozofická fakulta Univerzity Palackého v Olomouci, obor Psychologie</strong></li>
+                    <li><strong>Komplexní psychoterapeutický výcvik v systemickém, na řešení orientovaném přístupu</strong></li>
+                    <li>&nbsp;</li>
+                    <li><strong>Krizová intervence tváří v tvář</strong> (D Liberec)</li>
+                    <li><strong>Vztahová vazba</strong> (Mgr. Duchoňová)</li>
+                    <li><strong>Encouragement – výcvik v dodávání odvahy</strong> (MANSIO)</li>
+                    <li><strong>Edukativní rodičovská terapie</strong> (MANSIO)</li>
+                    <li><strong>Vyrovnávání se se smrtí</strong> (Vigvam)</li>
+                    <li><strong>Psychoterapie dětí v online prostředí</strong> (Mgr. Vránová)</li>
+                    <li><strong>Pozitivní psychoterapie</strong> (doc. Slezáčková)</li>
+                    <li><strong>Školní mediace a způsoby řešení konfliktů</strong> (Restorativní škola)</li>
+                    <li><strong>Rodina během a po rozvodu pohledem rodinných terapeutů</strong> (Mgr. Heindorferová)</li>
                 </ul>
             </div>
         </section>
 
         <section id="cenik">
-            <div class="container">
-                <h2>Ceník</h2>
-
-                                    <h3>Storno podmínky</h3>
-
+            <div class="container">                
                 <div class="ceny">
+                    <h2>Ceník</h2>
                     <article>
-                        <h3>Individuální či párová terapie/ konzultace</h3>
+                        <h3>Psychoterapie/Konzultace</h3>
                         <p>950 Kč (50 minut)</p>
+                        <small>Platba je vyžadována předem na účet, termín je rezervovaný až po připsání platby.</small>
                     </article>
                     <article>
                         <h3>Expresní termín</h3>
@@ -114,12 +113,12 @@
                         <h3>Vypracování zprávy</h3>
                         <p>500 Kč/A4</p>
                     </article>
-                    <small>Platba je vyžadována předem na účet, termín je rezervovaný až po připsání platby.</small>
                 </div>
 
                 <div id="storno">
-                    <p>Méně než 24 hodin před domluveným termínem - 100%</p>
-                    <p>Mezi 24-48 hodin před sezením je to 50%</p>
+                    <h3>Storno podmínky</h3>
+                    <p>Méně než 24 hodin před domluveným termínem - 100%.</p>
+                    <p>Mezi 24-48 hodin před sezením je to 50%.</p>
                     <p>Termín je možné bezplatně přeobjednat či zrušit, pokud tak stihnete více než 48 hodin před plánovaným sezením. Při zrušení termínu 48 až 24 hodin předem je účtováno 50 % z domluvené ceny sezení.</p>   
                     <p>Při zrušení termínu méně než 24 hodin předem zaplacená částka propadá.</p>
                     <p>Storno poplatky jsou vyžadovány z důvodu, že Váš termín je pro ostatní vyblokovaný a již zpravidla nejde obsadit jinými klienty.</p>
@@ -135,7 +134,6 @@
 
                     <section>
                         <h3>Mgr. Lucie Marcinčínová</h3>
-                        <h4>Psycholožka, online terapeutka, canisterapeutka</h4>
                         <a href="mailto:terapie.marcincinova@seznam.cz">terapie.marcincinova@seznam.cz</a>
                     </section>
 
