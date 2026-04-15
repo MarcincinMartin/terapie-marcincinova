@@ -1,143 +1,240 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Terapie Mgr. Lucie Marcinčínová</title>
-    <link rel="stylesheet" href="output.css">
-</head>
-<body>
+    <link rel="stylesheet" href="output.css" />
+    <script src="form.js" defer></script>
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <a href="#">
-                <div id="profile">
-                    <img src="./pic/profile.webp" alt="Mgr. Lucie Marcinčínová">
-                    <div id="profile-text">
-                        <h1>Mgr. Lucie Marcinčínová</h1>
-                        <p>Psycholog, psychoterapeut</p>
-                    </div>
-                </div>
-            </a>
+      <div class="container">
+        <a href="#">
+          <div id="profile">
+            <img src="./pic/profile.webp" alt="Mgr. Lucie Marcinčínová" />
+            <div id="profile-text">
+              <h1>Mgr. Lucie Marcinčínová</h1>
+              <p>Psycholog, psychoterapeut</p>
+            </div>
+          </div>
+        </a>
 
-            <nav>
-                <ul>
-                    <li><a href="#sluzby">Služby</a></li>
-                    <li><a href="#omne">O mně</a></li>
-                    <li><a href="#cenik">Ceník</a></li>
-                    <li><a href="#kontakt">Kontakt</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+          <ul>
+            <li><a href="#sluzby">Služby</a></li>
+            <li><a href="#omne">O mně</a></li>
+            <li><a href="#cenik">Ceník</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
-        <section id="sluzby">
-            <article id="terapie">
-                <h2>Psychoterapie</h2>
-                <ul>
-                    <li>Individuální psychoterapie</li>
-                    <li>Psychoterapie dětí a mladistvých</li>
-                </ul>
-                <img src="./pic/online.png" alt="Psychoterapie">
+      <section id="sluzby">
+        <article id="terapie">
+          <h2>Psychoterapie</h2>
+          <ul>
+            <li>Individuální psychoterapie</li>
+            <li>Psychoterapie dětí a mladistvých</li>
+          </ul>
+          <img src="./pic/online.png" alt="Psychoterapie" />
+        </article>
+
+        <article id="poradenstvi">
+          <h2>Psychologické poradenství</h2>
+          <ul>
+            <li>Psychologická konzultace</li>
+            <li>Školská problematika</li>
+            <li>Práce se stresem a úzkostí</li>
+            <li>Výchova dětí a rodičovství</li>
+          </ul>
+          <img src="./pic/online.png" alt="Psychologické poradenství" />
+        </article>
+
+        <article id="vzdelavani">
+          <h2>Lektorování</h2>
+          <img src="./pic/online.png" alt="Vzdělávání" />
+        </article>
+      </section>
+
+      <section id="omne">
+        <div class="container">
+          <article>
+            <h2>O mně</h2>
+            <img src="./pic/o_mne.png" alt="O mně, Mgr. Lucie Marcinčínová" />
+            <p>
+              Jsem vystudovaná psycholožka a mám plně dokončený komplexní
+              psychoterapeutický výcvik v systemickém, na řešení orientovaném
+              přístupu.
+            </p>
+            <p>
+              Pracovala jsem na pozici dětské psycholožky v
+              Pedagogicko-psychologické poradně, mám zkušenosti i ze zařízení
+              pro děti vyžadující okamžitou pomoc nebo doléčovacích center. Od
+              roku 2021 poskytuji online psychoterapie pro dospělé, dospívající
+              i děti (od 7 let).
+            </p>
+            <p>
+              Spolupracuji se školami v rámci vzdělávacích programů a
+              adaptačních kurzů. Jsem členem České asociace pro psychoterapii.
+              Od roku 2023 mám složenou zkoušku v canisterapii.
+            </p>
+            <p>
+              Zabývám se tématem úzkostných stavů, panických atak, stresu a
+              sebevědomí. Mohu Vám pomoci při zpracování ztráty, nabízím
+              doprovázení i krizovou intervenci v případě nečekaných událostí.
+              Rádapracuji s konceptem naděje, s klienty se zabýváme tím, jak
+              dostat více radosti a spokojenosti do jejich života. Věřím, že na
+              tom opravdu záleží.
+            </p>
+            <p>
+              Můj terapeutický styl je orientovaný na řešení. Věřím, že zaměření
+              na to, co je již teď ve vašem životě funkční a dobré, přinese více
+              než hloubání nad chybami v minulosti. Můžeme se společně zamýšlet
+              nad tím, kým byste chtěli doopravdy být.
+            </p>
+            <p>
+              Sama aktivně odpočívám procházkami v přírodě, mám ráda zvířata,
+              intenzivně se věnuji kynologii a důležitá je pro mě i
+              enviromentální problematika. Měla jsem možnost procestovat více
+              než čtyřicet států, což ovlivnilo moje hodnoty a způsob vnímání
+              světa.
+            </p>
+            <p id="motto">
+              Věřím, že opravdové bohatství není záležitostí peněz.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="vzdelani">
+        <div class="container">
+          <h2>Vzdělání</h2>
+          <ul>
+            <li>
+              <strong
+                >Filozofická fakulta Univerzity Palackého v Olomouci, obor
+                Psychologie</strong
+              >
+            </li>
+            <li>
+              <strong
+                >Komplexní psychoterapeutický výcvik v systemickém, na řešení
+                orientovaném přístupu</strong
+              >
+            </li>
+            <li>&nbsp;</li>
+            <li>
+              <strong>Krizová intervence tváří v tvář</strong> (D Liberec)
+            </li>
+            <li><strong>Vztahová vazba</strong> (Mgr. Duchoňová)</li>
+            <li>
+              <strong>Encouragement – výcvik v dodávání odvahy</strong> (MANSIO)
+            </li>
+            <li><strong>Edukativní rodičovská terapie</strong> (MANSIO)</li>
+            <li><strong>Vyrovnávání se se smrtí</strong> (Vigvam)</li>
+            <li>
+              <strong>Psychoterapie dětí v online prostředí</strong> (Mgr.
+              Vránová)
+            </li>
+            <li><strong>Pozitivní psychoterapie</strong> (doc. Slezáčková)</li>
+            <li>
+              <strong>Školní mediace a způsoby řešení konfliktů</strong>
+              (Restorativní škola)
+            </li>
+            <li>
+              <strong
+                >Rodina během a po rozvodu pohledem rodinných terapeutů</strong
+              >
+              (Mgr. Heindorferová)
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="cenik">
+        <div class="container">
+          <div class="ceny">
+            <h2>Ceník</h2>
+            <article>
+              <h3>Psychoterapie/Konzultace</h3>
+              <p>950 Kč (50 minut)</p>
+              <small
+                >Platba je vyžadována předem na účet, termín je rezervovaný až
+                po připsání platby.</small
+              >
             </article>
-
-            <article id="poradenstvi">
-                <h2>Psychologické poradenství</h2>
-                <ul>
-                    <li>Psychologická konzultace</li>
-                    <li>Školská problematika</li>
-                    <li>Práce se stresem a úzkostí</li>
-                    <li>Výchova dětí a rodičovství</li>
-                </ul>
-                <img src="./pic/online.png" alt="Psychologické poradenství">
+            <article>
+              <h3>Expresní termín</h3>
+              <p>1 500 Kč (50 minut)</p>
+              <small
+                >Pokud to bude možné, poskytnu Vám termín nad rámec vypsaných
+                termínů do 48 hodin</small
+              >
             </article>
-
-            <article id="vzdelavani">
-                <h2>Lektorování</h2>
-                <img src="./pic/online.png" alt="Vzdělávání">
+            <article>
+              <h3>Vypracování zprávy</h3>
+              <p>500 Kč/A4</p>
             </article>
-        </section>
+            <strong
+              >NA TERAPII LZE ČERPAT PŘÍSPĚVEK OD ZDRAVOTNÍ POJIŠŤOVNY: <br />
+              VZP, ZPMV, RBP, ČPZP, ZPŠ</strong
+            >
+          </div>
 
-        <section id="omne">
-            <div class="container">
-                
-                <article>
-                    <h2>O mně</h2>
-                    <img src="./pic/o_mne.png" alt="O mně, Mgr. Lucie Marcinčínová">
-                    <p>Jsem vystudovaná psycholožka a mám plně dokončený komplexní psychoterapeutický výcvik v systemickém, na řešení orientovaném přístupu.</p>
-                    <p>Pracovala jsem na pozici dětské psycholožky v Pedagogicko-psychologické poradně, mám zkušenosti i ze zařízení pro děti vyžadující okamžitou pomoc nebo doléčovacích center. Od roku 2021 poskytuji online psychoterapie pro dospělé, dospívající i děti (od 7 let).</p>
-                    <p>Spolupracuji se školami v rámci vzdělávacích programů a adaptačních kurzů. Jsem členem České asociace pro psychoterapii. Od roku 2023 mám složenou zkoušku v canisterapii.</p>
-                    <p>Zabývám se tématem úzkostných stavů, panických atak, stresu a sebevědomí. Mohu Vám pomoci při zpracování ztráty, nabízím doprovázení i krizovou intervenci v případě nečekaných událostí. Rádapracuji s konceptem naděje, s klienty se zabýváme tím, jak dostat více radosti a spokojenosti do jejich života. Věřím, že na tom opravdu záleží.</p>
-                    <p>Můj terapeutický styl je orientovaný na řešení. Věřím, že zaměření na to, co je již teď ve vašem životě funkční a dobré, přinese více než hloubání nad chybami v minulosti. Můžeme se společně zamýšlet nad tím, kým byste chtěli doopravdy být.</p>
-                    <p>Sama aktivně odpočívám procházkami v přírodě, mám ráda zvířata, intenzivně se věnuji kynologii a důležitá je pro mě i enviromentální problematika. Měla jsem možnost procestovat více než čtyřicet států, což ovlivnilo moje hodnoty a způsob vnímání světa.</p>
-                    <p id="motto">Věřím, že opravdové bohatství není záležitostí peněz.</p>
-                </article>
-            </div>
-        </section>
+          <div id="storno">
+            <h3>Storno podmínky</h3>
+            <p>Méně než 24 hodin před domluveným termínem - 100%.</p>
+            <p>Mezi 24-48 hodin před sezením je to 50%.</p>
+            <p>
+              Termín je možné bezplatně přeobjednat či zrušit, pokud tak
+              stihnete více než 48 hodin před plánovaným sezením. Při zrušení
+              termínu 48 až 24 hodin předem je účtováno 50 % z domluvené ceny
+              sezení.
+            </p>
+            <p>
+              Při zrušení termínu méně než 24 hodin předem zaplacená částka
+              propadá.
+            </p>
+            <p>
+              Storno poplatky jsou vyžadovány z důvodu, že Váš termín je pro
+              ostatní vyblokovaný a již zpravidla nejde obsadit jinými klienty.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section id="vzdelani">
-            <div class="container">
-                <h2>Vzdělání</h2>
-                <ul>
-                    <li><strong>Filozofická fakulta Univerzity Palackého v Olomouci, obor Psychologie</strong></li>
-                    <li><strong>Komplexní psychoterapeutický výcvik v systemickém, na řešení orientovaném přístupu</strong></li>
-                    <li>&nbsp;</li>
-                    <li><strong>Krizová intervence tváří v tvář</strong> (D Liberec)</li>
-                    <li><strong>Vztahová vazba</strong> (Mgr. Duchoňová)</li>
-                    <li><strong>Encouragement – výcvik v dodávání odvahy</strong> (MANSIO)</li>
-                    <li><strong>Edukativní rodičovská terapie</strong> (MANSIO)</li>
-                    <li><strong>Vyrovnávání se se smrtí</strong> (Vigvam)</li>
-                    <li><strong>Psychoterapie dětí v online prostředí</strong> (Mgr. Vránová)</li>
-                    <li><strong>Pozitivní psychoterapie</strong> (doc. Slezáčková)</li>
-                    <li><strong>Školní mediace a způsoby řešení konfliktů</strong> (Restorativní škola)</li>
-                    <li><strong>Rodina během a po rozvodu pohledem rodinných terapeutů</strong> (Mgr. Heindorferová)</li>
-                </ul>
-            </div>
-        </section>
+      <section id="kontakt">
+        <h2>Kontakt</h2>
+        <div class="container">
+          <img src="./pic/profile.webp" alt="Mgr. Lucie Marcinčínová" />
 
-        <section id="cenik">
-            <div class="container">                
-                <div class="ceny">
-                    <h2>Ceník</h2>
-                    <article>
-                        <h3>Psychoterapie/Konzultace</h3>
-                        <p>950 Kč (50 minut)</p>
-                        <small>Platba je vyžadována předem na účet, termín je rezervovaný až po připsání platby.</small>
-                    </article>
-                    <article>
-                        <h3>Expresní termín</h3>
-                        <p>1 500 Kč (50 minut)</p>
-                        <small>Pokud to bude možné, poskytnu Vám termín nad rámec vypsaných termínů do 48 hodin</small>
-                    </article>
-                    <article>
-                        <h3>Vypracování zprávy</h3>
-                        <p>500 Kč/A4</p>
-                    </article>
-                </div>
+          <section>
+            <h3>Mgr. Lucie Marcinčínová</h3>
+            <a href="mailto:terapie.marcincinova@seznam.cz"
+              >terapie.marcincinova@seznam.cz</a
+            >
+            <p>IČO: 09704264</p>
+          </section>
+        </div>
 
-                <div id="storno">
-                    <h3>Storno podmínky</h3>
-                    <p>Méně než 24 hodin před domluveným termínem - 100%.</p>
-                    <p>Mezi 24-48 hodin před sezením je to 50%.</p>
-                    <p>Termín je možné bezplatně přeobjednat či zrušit, pokud tak stihnete více než 48 hodin před plánovaným sezením. Při zrušení termínu 48 až 24 hodin předem je účtováno 50 % z domluvené ceny sezení.</p>   
-                    <p>Při zrušení termínu méně než 24 hodin předem zaplacená částka propadá.</p>
-                    <p>Storno poplatky jsou vyžadovány z důvodu, že Váš termín je pro ostatní vyblokovaný a již zpravidla nejde obsadit jinými klienty.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="kontakt">
-            <h2>Kontakt</h2>
-                <div class="container">
-
-                    <img src="./pic/profile.webp" alt="Mgr. Lucie Marcinčínová">
-
-                    <section>
-                        <h3>Mgr. Lucie Marcinčínová</h3>
-                        <a href="mailto:terapie.marcincinova@seznam.cz">terapie.marcincinova@seznam.cz</a>
-                    </section>
-
-        </section>
+        <form id="contact-form">
+          <h3>Kontaktujte mě</h3>
+          <input
+            type="hidden"
+            name="access_key"
+            value="ba1961ed-6103-4ac7-91d3-670b2aa4142e" />
+          <label for="name">Jméno: </label>
+          <input type="text" name="name" required />
+          <label for="email">Email: </label>
+          <input type="email" name="email" required />
+          <label for="message">Zpráva: </label>
+          <textarea name="message" rows="5"></textarea>
+          <button type="submit">Odeslat</button>
+        </form>
+      </section>
     </main>
-</body>
+  </body>
 </html>
