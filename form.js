@@ -12,7 +12,7 @@ form.addEventListener("submit", async (e) => {
   submitBtn.disabled = true;
 
   try {
-    const response = await fetch("https://api.web3forms.com/submiting", {
+    const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData,
     });
