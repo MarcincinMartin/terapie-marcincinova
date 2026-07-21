@@ -1,273 +1,473 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="cs">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Terapie Mgr. Lucie Marcinčínová</title>
-    <link rel="stylesheet" href="output.css" />
-    <script src="form.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <a href="#">
-          <div id="profile">
-            <img src="./pic/profile.webp" alt="Mgr. Lucie Marcinčínová" />
-            <div id="profile-text">
-              <h1>Mgr. Lucie Marcinčínová</h1>
-              <p>Psycholog, psychoterapeut</p>
-            </div>
-          </div>
-        </a>
 
-        <nav>
-          <ul>
-            <li><a href="#sluzby">Služby</a></li>
-            <li><a href="#omne">O mně</a></li>
-            <li><a href="#cenik">Ceník</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-          </ul>
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Mgr. Lucie Marcinčinová | Psychoterapie</title>
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Manrope:wght@300;400&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&amp;display=swap"
+                rel="stylesheet" />
+        <!-- Material Symbols -->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <!-- Tailwind Configuration -->
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "surface-container": "#efedee",
+                                                "on-surface-variant": "#42474a",
+                                                "on-secondary-container": "#526869",
+                                                "inverse-primary": "#b5cad4",
+                                                "on-secondary": "#ffffff",
+                                                "on-primary-container": "#c1d5e0",
+                                                "soft-moss": "#A7B09E",
+                                                "surface-container-low": "#f5f3f3",
+                                                "surface-container-lowest": "#ffffff",
+                                                "mist-white": "#F7F8F6",
+                                                "inverse-on-surface": "#f2f0f1",
+                                                "fjord-blue": "#2C3E47",
+                                                "secondary-fixed": "#cfe7e7",
+                                                "on-secondary-fixed": "#081f1f",
+                                                "on-tertiary-fixed-variant": "#414845",
+                                                "background": "#fbf9f9",
+                                                "on-tertiary-container": "#cdd4cf",
+                                                "inverse-surface": "#303031",
+                                                "tertiary-fixed-dim": "#c1c8c3",
+                                                "surface-bright": "#fbf9f9",
+                                                "secondary": "#4d6263",
+                                                "primary-container": "#4a5d66",
+                                                "tertiary-container": "#555c58",
+                                                "tertiary": "#3e4541",
+                                                "primary-fixed-dim": "#b5cad4",
+                                                "surface-container-high": "#e9e8e8",
+                                                "heather-gray": "#EDEDED",
+                                                "surface-tint": "#4e616a",
+                                                "surface-variant": "#e4e2e2",
+                                                "on-primary-fixed": "#0a1e26",
+                                                "tertiary-fixed": "#dde4df",
+                                                "on-primary-fixed-variant": "#374952",
+                                                "on-background": "#1b1c1c",
+                                                "on-primary": "#ffffff",
+                                                "on-error": "#ffffff",
+                                                "surface-dim": "#dbdada",
+                                                "on-tertiary": "#ffffff",
+                                                "primary-fixed": "#d1e6f0",
+                                                "primary": "#33454e",
+                                                "on-tertiary-fixed": "#161d1a",
+                                                "on-surface": "#1b1c1c",
+                                                "outline-variant": "#c3c7ca",
+                                                "surface": "#fbf9f9",
+                                                "secondary-container": "#cfe7e7",
+                                                "outline": "#73787b",
+                                                "error": "#ba1a1a",
+                                                "error-container": "#ffdad6",
+                                                "on-secondary-fixed-variant": "#354b4b",
+                                                "on-error-container": "#93000a",
+                                                "secondary-fixed-dim": "#b4cbcb",
+                                                "surface-container-highest": "#e4e2e2"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.25rem",
+                                                "lg": "0.5rem",
+                                                "xl": "0.75rem",
+                                                "full": "9999px"
+                                        },
+                                        "spacing": {
+                                                "gutter": "24px",
+                                                "container-max": "1140px",
+                                                "section-gap": "120px",
+                                                "margin-mobile": "20px",
+                                                "element-gap": "32px"
+                                        },
+                                        "fontFamily": {
+                                                "headline-xl": [
+                                                        "Manrope"
+                                                ],
+                                                "body-lg": [
+                                                        "Inter"
+                                                ],
+                                                "label-sm": [
+                                                        "Inter"
+                                                ],
+                                                "body-md": [
+                                                        "Inter"
+                                                ],
+                                                "headline-lg-mobile": [
+                                                        "Manrope"
+                                                ],
+                                                "headline-lg": [
+                                                        "Manrope"
+                                                ]
+                                        },
+                                        "fontSize": {
+                                                "headline-xl": [
+                                                        "48px",
+                                                        {
+                                                                "lineHeight": "56px",
+                                                                "letterSpacing": "-0.02em",
+                                                                "fontWeight": "300"
+                                                        }
+                                                ],
+                                                "body-lg": [
+                                                        "18px",
+                                                        {
+                                                                "lineHeight": "30px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "label-sm": [
+                                                        "13px",
+                                                        {
+                                                                "lineHeight": "16px",
+                                                                "letterSpacing": "0.05em",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "body-md": [
+                                                        "16px",
+                                                        {
+                                                                "lineHeight": "26px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "headline-lg-mobile": [
+                                                        "28px",
+                                                        {
+                                                                "lineHeight": "36px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "headline-lg": [
+                                                        "32px",
+                                                        {
+                                                                "lineHeight": "40px",
+                                                                "letterSpacing": "-0.01em",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ]
+                                        }
+                                }
+                        }
+                }
+        </script>
+            <script src="form.js" defer></script>
+        <style>
+                body {
+                        background-color: #fbf9f9;
+                        /* surface */
+                        color: #1b1c1c;
+                        /* on-surface */
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                }
+
+                .material-symbols-outlined {
+                        font-variation-settings:
+                                'FILL' 0,
+                                'wght' 300,
+                                'GRAD' 0,
+                                'opsz' 24
+                }
+        </style>
+</head>
+
+<body class="bg-background" style="background-color: #F5F1ED;">
+        <!-- TopNavBar Shared Component -->
+        <nav class="bg-surface dark:bg-surface w-full h-32 md:h-20 border-b-0 shadow-none">
+                <div
+                        class="flex flex-col pb-4 md:pb-0 gap-4 md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-gutter h-full">
+                        <div class="font-headline-lg text-headline-lg text-fjord-blue dark:text-inverse-primary cursor-pointer"
+                                style="font-family: 'Lora', serif;">
+                                Mgr. Lucie Marcinčínová
+                                <span
+                                        class="block text-label-sm font-label-sm text-secondary uppercase tracking-widest mt-1">psycholog,
+                                        psychoterapeut</span>
+                        </div>
+                        <div class="flex items-center gap-8">
+                                <a class="font-body-md text-body-md uppercase tracking-wider text-on-surface-variant hover:text-fjord-blue transition-colors duration-300 cursor-pointer"
+                                        href="#o-mne">O mně</a>
+                                <a class="font-body-md text-body-md uppercase tracking-wider text-on-surface-variant hover:text-fjord-blue transition-colors duration-300 cursor-pointer"
+                                        href="#kontakt">Kontakt</a>
+                        </div>
+                </div>
         </nav>
-      </div>
-    </header>
+        <!-- Hero Section (Philosophy & Intro) -->
+        <section
+                class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap flex flex-col md:flex-row items-center justify-between gap-element-gap md:gap-16">
+                <div class="flex-1 space-y-8 order-2 md:order-1">
+                        <p class="font-body-lg text-body-lg text-secondary border-l-2 border-soft-moss pl-6 italic">
+                                „Věřím, že zaměření na to, co je již teď ve vašem životě funkční a dobré, přinese více
+                                než hloubání nad chybami v minulosti. Můžeme se společně zamýšlet nad tím, kým byste
+                                chtěli doopravdy být.“
+                        </p>
+                </div>
+                <div class="flex-1 flex justify-center md:justify-end order-1 md:order-2 w-full">
+                        <div class="relative w-64 h-64 md:w-[400px] md:h-[400px]"><img alt="Mgr. Lucie Marcinčinová"
+                                        class="relative z-10 w-full h-full object-cover border-4 border-surface shadow-[0_20px_60px_rgba(44,62,71,0.08)]"
+                                        src="https://lh3.googleusercontent.com/aida/AP1WRLv32fNTzPGpXgPz9wgBL4UeKxCq-3RwwncqrIIR6_orDMgM-pn-4tJ8hciMdRW7PwlD71OaFD8ZRef86PRBBw8IQRlg2vr_PJ0jWLFQS9FrMVReaQ1Fd4bm0GqIa6UKBM8G8l0_Pbi5BvKaJnfPfathBMIVAZ-TbBmGmNeemKVNwqy1Q_EUgNvAIyy-qMu9FwEJKGlEF4dl_QvAf0I84RPDNDiNS5lnonAfU-MeyeYXWRdjISqxakQ58g"
+                                        style="border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;" /></div>
+                </div>
+        </section>
+        <!-- O mně Section (Comprehensive) -->
+        <section id="o-mne" class="bg-mist-white py-section-gap border-y border-surface-variant" id="o-mne-detail">
+                <div
+                        class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex flex-col md:flex-row-reverse items-start gap-element-gap md:gap-24">
+                        <div class="max-w-3xl mx-auto text-center space-y-6">
+                                <div
+                                        class="inline-block bg-surface px-3 py-1 rounded font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-2">
+                                        Představení</div>
+                                <h2 class="font-headline-xl text-headline-xl text-fjord-blue"
+                                        style="font-family: 'Lora', serif;">O mně</h2>
+                                <div class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+                                        <p>Jsem vystudovaná psycholožka a mám plně dokončený komplexní
+                                                psychoterapeutický výcvik v systemickém, na řešení orientovaném
+                                                přístupu.</p>
+                                        <p>Pracuji na pozici dětské psycholožky v Pedagogicko-psychologické
+                                                poradně, mám zkušenosti i ze zařízení pro děti vyžadující okamžitou
+                                                pomoc nebo doléčovacích center. Od roku 2021 poskytuji online
+                                                psychoterapie pro dospělé, dospívající i děti (od 7 let).</p>
+                                        <p>Spolupracuji se školami v rámci vzdělávacích programů a adaptačních kurzů.
+                                                Jsem členem České asociace pro psychoterapii. Od roku 2023 mám složenou
+                                                zkoušku v canisterapii.</p>
+                                        <p>Zabývám se tématem úzkostných stavů, panických atak, stresu a sebevědomí.
+                                                Mohu Vám pomoci při zpracování ztráty, nabízím doprovázení i krizovou
+                                                intervenci v případě nečekaných událostí. Ráda pracuji s konceptem
+                                                naděje, s klienty se zabýváme tím, jak dostat více radosti a
+                                                spokojenosti do jejich života. Věřím, že na tom opravdu záleží.</p>
+                                        <p>Můj terapeutický styl je orientovaný na řešení. Věřím, že zaměření na to, co
+                                                je již teď ve vašem životě funkční a dobré, přinese více než hloubání
+                                                nad chybami v minulosti. Můžeme se společně zamýšlet nad tím, kým byste
+                                                chtěli doopravdy být.</p>
+                                        <p>Sama aktivně odpočívám procházkami v přírodě, mám ráda zvířata, intenzivně se
+                                                věnuji kynologii a důležitá je pro mě i enviromentální problematika.
+                                                Měla jsem možnost procestovat více než čtyřicet států, což ovlivnilo
+                                                moje hodnoty a způsob vnímání světa.</p>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Education Section -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap">
+                <div class="max-w-3xl mx-auto space-y-8">
+                        <div>
+                                <h2 class="font-headline-xl text-headline-xl text-fjord-blue mb-4"
+                                        style="font-family: 'Lora', serif;">Vzdělání</h2>
+                        </div>
+                        <div class="space-y-4 pt-4">
+                                <div class="space-y-4">
+                                        <div class="bg-soft-moss/10 p-4 rounded-xl border border-soft-moss/20">
+                                                <p class="font-body-md text-body-md text-fjord-blue">Filozofická fakulta
+                                                        Univerzity Palackého v Olomouci, obor Psychologie</p>
+                                        </div>
+                                        <div class="bg-soft-moss/10 p-4 rounded-xl border border-soft-moss/20">
+                                                <p class="font-body-md text-body-md text-fjord-blue">Komplexní
+                                                        psychoterapeutický výcvik v systemickém, na řešení orientovaném
+                                                        přístupu</p>
+                                        </div>
+                                </div>
+                                <div class="pt-8 pb-2">
+                                        <h3
+                                                class="font-label-sm text-label-sm text-secondary uppercase tracking-widest border-b border-outline-variant/20 pb-2">
+                                                Další kurzy a výcviky</h3>
+                                </div>
+                                <div class="space-y-4">
+                                        <div class="bg-soft-moss/10 p-4 rounded-xl border border-soft-moss/20">
+                                                <p class="font-body-md text-body-md text-fjord-blue">Krizová intervence
+                                                        tváří v tvář (D Liberec)</p>
+                                        </div>
+                                        <div class="bg-soft-moss/10 p-4 rounded-xl border border-soft-moss/20">
+                                                <p class="font-body-md text-body-md text-fjord-blue">Vztahová vazba
+                                                        (Mgr. Duchoňová)</p>
+                                        </div>
+                                        <div class="bg-soft-moss/10 p-4 rounded-xl border border-soft-moss/20">
+                                                <p class="font-body-md text-body-md text-fjord-blue">Encouragement –
+                                                        výcvik v dodávání odvahy (MANSIO)</p>
+                                        </div>
+                                        <div class="bg-soft-moss/10 p-4 rounded-xl border border-soft-moss/20">
+                                                <p class="font-body-md text-body-md text-fjord-blue">Edukativní
+                                                        rodičovská terapie (MANSIO)</p>
+                                        </div>
+                                        <div class="bg-soft-moss/10 p-4 rounded-xl border border-soft-moss/20">
+                                                <p class="font-body-md text-body-md text-fjord-blue">Vyrovnávání se se
+                                                        smrtí (Vigvam)</p>
+                                        </div>
+                                        <div class="bg-soft-moss/10 p-4 rounded-xl border border-soft-moss/20">
+                                                <p class="font-body-md text-body-md text-fjord-blue">Psychoterapie dětí
+                                                        v online prostředí (Mgr. Vránová)</p>
+                                        </div>
+                                        <div class="bg-soft-moss/10 p-4 rounded-xl border border-soft-moss/20">
+                                                <p class="font-body-md text-body-md text-fjord-blue">Pozitivní
+                                                        psychoterapie (doc. Slezáčková)</p>
+                                        </div>
+                                        <div class="bg-soft-moss/10 p-4 rounded-xl border border-soft-moss/20">
+                                                <p class="font-body-md text-body-md text-fjord-blue">Školní mediace a
+                                                        způsoby řešení konfliktů (Restorativní škola)</p>
+                                        </div>
+                                        <div class="bg-soft-moss/10 p-4 rounded-xl border border-soft-moss/20">
+                                                <p class="font-body-md text-body-md text-fjord-blue">Rodina během a po
+                                                        rozvodu pohledem rodinných terapeutů (Mgr. Heindorferová)</p>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Contact Section -->
+        <section class="bg-surface-container-low py-section-gap" id="kontakt">
+                <div
+                        class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid md:grid-cols-2 gap-element-gap md:gap-24">
+                        <div class="space-y-8">
+                                <div>
+                                        <h2 class="font-headline-xl text-headline-xl text-fjord-blue mb-4"
+                                                style="font-family: 'Lora', serif;">Kontakt</h2>
+                                        <p class="font-body-md text-body-md text-on-surface-variant">Můžete mě
+                                                kontaktovat
+                                                přímo e-mailem nebo prostřednictvím formuláře.</p>
+                                </div>
+                                <div class="space-y-4">
+                                        <div class="flex items-center gap-4">
+                                                <div
+                                                        class="w-12 h-12 rounded-full bg-surface flex items-center justify-center text-soft-moss shadow-sm">
+                                                        <span class="material-symbols-outlined">mail</span>
+                                                </div>
+                                                <div>
+                                                        <p
+                                                                class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">
+                                                                E-mail</p>
+                                                        <p class="font-body-lg text-body-lg text-fjord-blue">
+                                                                <a href="mailto:terapie.marcincinova@seznam.cz"
+                                                                        class="hover:underline">terapie.marcincinova@seznam.cz</a>
+                                                        </p>
+                                                </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                                <div
+                                                        class="w-12 h-12 rounded-full bg-surface flex items-center justify-center text-soft-moss shadow-sm">
+                                                        <span class="material-symbols-outlined">link</span>
+                                                </div>
+                                                <div>
+                                                        <p
+                                                                class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">
+                                                                Profil na Mendora.cz</p>
+                                                        <p class="font-body-lg text-body-lg text-fjord-blue">
+                                                                <a href="https://www.mendora.cz/nasi-psychologove/lucie-marcincinova"
+                                                                        target="_blank" rel="noopener noreferrer"
+                                                                        class="hover:underline">Možnost rezervace online
+                                                                        terapie</a>
+                                                        </p>
+                                                </div>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                                <div
+                                                        class="w-12 h-12 rounded-full bg-surface flex items-center justify-center text-soft-moss shadow-sm">
+                                                        <span class="material-symbols-outlined">badge</span>
+                                                </div>
 
-    <main>
-      <section id="sluzby">
-        <article id="terapie">
-          <h2>Psychoterapie</h2>
-          <ul>
-            <li>Individuální psychoterapie</li>
-            <li>Psychoterapie dětí a mladistvých</li>
-          </ul>
-          <img src="./pic/online.png" alt="Psychoterapie" />
-        </article>
-
-        <article id="poradenstvi">
-          <h2>Psychologické poradenství</h2>
-          <ul>
-            <li>Psychologická konzultace</li>
-            <li>Školská problematika</li>
-            <li>Práce se stresem a úzkostí</li>
-            <li>Výchova dětí a rodičovství</li>
-          </ul>
-          <img src="./pic/online.png" alt="Psychologické poradenství" />
-        </article>
-
-        <article id="vzdelavani">
-          <h2>Lektorování</h2>
-          <img src="./pic/online.png" alt="Vzdělávání" />
-        </article>
-      </section>
-
-      <section id="omne">
-        <div class="container">
-          <article>
-            <h2>O mně</h2>
-            <img src="./pic/o_mne.png" alt="O mně, Mgr. Lucie Marcinčínová" />
-            <p>
-              Jsem vystudovaná psycholožka a mám plně dokončený komplexní
-              psychoterapeutický výcvik v systemickém, na řešení orientovaném
-              přístupu.
-            </p>
-            <p>
-              Pracovala jsem na pozici dětské psycholožky v
-              Pedagogicko-psychologické poradně, mám zkušenosti i ze zařízení
-              pro děti vyžadující okamžitou pomoc nebo doléčovacích center. Od
-              roku 2021 poskytuji online psychoterapie pro dospělé, dospívající
-              i děti (od 7 let).
-            </p>
-            <p>
-              Spolupracuji se školami v rámci vzdělávacích programů a
-              adaptačních kurzů. Jsem členem České asociace pro psychoterapii.
-              Od roku 2023 mám složenou zkoušku v canisterapii.
-            </p>
-            <p>
-              Zabývám se tématem úzkostných stavů, panických atak, stresu a
-              sebevědomí. Mohu Vám pomoci při zpracování ztráty, nabízím
-              doprovázení i krizovou intervenci v případě nečekaných událostí.
-              Rádapracuji s konceptem naděje, s klienty se zabýváme tím, jak
-              dostat více radosti a spokojenosti do jejich života. Věřím, že na
-              tom opravdu záleží.
-            </p>
-            <p>
-              Můj terapeutický styl je orientovaný na řešení. Věřím, že zaměření
-              na to, co je již teď ve vašem životě funkční a dobré, přinese více
-              než hloubání nad chybami v minulosti. Můžeme se společně zamýšlet
-              nad tím, kým byste chtěli doopravdy být.
-            </p>
-            <p>
-              Sama aktivně odpočívám procházkami v přírodě, mám ráda zvířata,
-              intenzivně se věnuji kynologii a důležitá je pro mě i
-              enviromentální problematika. Měla jsem možnost procestovat více
-              než čtyřicet států, což ovlivnilo moje hodnoty a způsob vnímání
-              světa.
-            </p>
-            <p id="motto">
-              Věřím, že opravdové bohatství není záležitostí peněz.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="vzdelani">
-        <div class="container">
-          <h2>Vzdělání</h2>
-          <ul>
-            <li>
-              <strong
-                >Filozofická fakulta Univerzity Palackého v Olomouci, obor
-                Psychologie</strong
-              >
-            </li>
-            <li>
-              <strong
-                >Komplexní psychoterapeutický výcvik v systemickém, na řešení
-                orientovaném přístupu</strong
-              >
-            </li>
-            <li>&nbsp;</li>
-            <li>
-              <strong>Krizová intervence tváří v tvář</strong> (D Liberec)
-            </li>
-            <li><strong>Vztahová vazba</strong> (Mgr. Duchoňová)</li>
-            <li>
-              <strong>Encouragement – výcvik v dodávání odvahy</strong> (MANSIO)
-            </li>
-            <li><strong>Edukativní rodičovská terapie</strong> (MANSIO)</li>
-            <li><strong>Vyrovnávání se se smrtí</strong> (Vigvam)</li>
-            <li>
-              <strong>Psychoterapie dětí v online prostředí</strong> (Mgr.
-              Vránová)
-            </li>
-            <li><strong>Pozitivní psychoterapie</strong> (doc. Slezáčková)</li>
-            <li>
-              <strong>Školní mediace a způsoby řešení konfliktů</strong>
-              (Restorativní škola)
-            </li>
-            <li>
-              <strong
-                >Rodina během a po rozvodu pohledem rodinných terapeutů</strong
-              >
-              (Mgr. Heindorferová)
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="cenik">
-        <div class="container">
-          <div class="ceny">
-            <h2>Ceník</h2>
-            <article>
-              <h3>Psychoterapie/Konzultace</h3>
-              <p>950 Kč (50 minut)</p>
-              <small
-                >Platba je vyžadována předem na účet, termín je rezervovaný až
-                po připsání platby.</small
-              >
-            </article>
-            <article>
-              <h3>Expresní termín</h3>
-              <p>1 500 Kč (50 minut)</p>
-              <small
-                >Pokud to bude možné, poskytnu Vám termín nad rámec vypsaných
-                termínů do 48 hodin</small
-              >
-            </article>
-            <article>
-              <h3>Vypracování zprávy</h3>
-              <p>500 Kč/A4</p>
-            </article>
-            <strong
-              >NA TERAPII LZE ČERPAT PŘÍSPĚVEK OD ZDRAVOTNÍ POJIŠŤOVNY: <br />
-              VZP, ZPMV, RBP, ČPZP, ZPŠ</strong
-            >
-          </div>
-
-          <div id="storno">
-            <h3>Storno podmínky</h3>
-            <p>Méně než 24 hodin před domluveným termínem - 100%.</p>
-            <p>Mezi 24-48 hodin před sezením je to 50%.</p>
-            <p>
-              Termín je možné bezplatně přeobjednat či zrušit, pokud tak
-              stihnete více než 48 hodin před plánovaným sezením. Při zrušení
-              termínu 48 až 24 hodin předem je účtováno 50 % z domluvené ceny
-              sezení.
-            </p>
-            <p>
-              Při zrušení termínu méně než 24 hodin předem zaplacená částka
-              propadá.
-            </p>
-            <p>
-              Storno poplatky jsou vyžadovány z důvodu, že Váš termín je pro
-              ostatní vyblokovaný a již zpravidla nejde obsadit jinými klienty.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="reference">
-        <div class="container">
-          <h2>Reference</h2>
-
-          <div>
-            <article>
-              <blockquote>
-                Paní terapeutka byla velmi příjemná, empatická a chápající. Po
-                celou dobu z ní vyzařoval neskutečný klid, který vytvářel pocit
-                bezpečí a důvěry. Setkání s ní bylo velmi podpůrné a přínosné.
-              </blockquote>
-              <p>Ověřený klient, 8. 12. 2025</p>
-            </article>
-
-            <article>
-              <blockquote>
-                Paní psycholožka mi pomohla hned prvním setkáním. Umí naslouchat
-                a vhodně poradit k řešení problémů. Můžu doporučit ♥️
-              </blockquote>
-              <p>Lukáš Mucha, 26. 10. 2025</p>
-            </article>
-
-            <article>
-              <blockquote>
-                Terapie probíhala skvěle. Psycholožka je moc milá a já jsem se
-                cítila naprosto v bezpečí. Svoji práci dělá výborně.
-              </blockquote>
-              <p>Ověřený klient, 11. 10. 2025</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="kontakt">
-        <h2>Kontakt</h2>
-        <div class="container">
-          <img src="./pic/profile.webp" alt="Mgr. Lucie Marcinčínová" />
-
-          <section>
-            <h3>Mgr. Lucie Marcinčínová</h3>
-            <a href="mailto:terapie.marcincinova@seznam.cz"
-              >terapie.marcincinova@seznam.cz</a
-            >
-            <p>IČO: 09704264</p>
-          </section>
-        </div>
-
-        <form id="contact-form">
-          <h3>Kontaktujte mě</h3>
-          <input
+                                                <div>
+                                                        <p
+                                                                class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">
+                                                                Fakturační údaje</p>
+                                                        <p class="font-body-lg text-body-lg text-fjord-blue">IČO:
+                                                                09704264</p>
+                                                </div>
+                                        </div>
+                                </div>
+                                        <div class="flex flex-row items-center text-left gap-6">
+                                                <div
+                                                        class="w-40 aspect-square md:w-48 md:aspect-square rounded-full bg-white overflow-hidden border border-outline-variant/20 shadow-sm flex items-center justify-center shrink-0">
+                                                        <img src="pic/CAP_odznak_radna_F_web.png"
+                                                                alt="ČAP odznak řádného člena"
+                                                                class="w-[133%] h-[133%] object-cover" />
+                                                </div>
+                                                <div class="space-y-3 max-w-sm">
+                                                        <p
+                                                                class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">
+                                                                ČAP: Česká asociace pro psychoterapii</p>
+                                                        <p class="font-body-lg text-body-lg text-fjord-blue">
+                                                                Jsem řádným členem ČAP.
+                                                        </p>
+                                                        <p class="font-body-md text-body-md text-on-surface-variant">
+                                                                Na sezení je možné čerpat příspěvek od
+                                                                <a href="https://czap.cz/spoluprace-zp" target="_blank"
+                                                                        rel="noopener noreferrer"
+                                                                        class="text-fjord-blue hover:underline">zdravotních
+                                                                        pojišťoven</a>.
+                                                        </p>
+                                                </div>
+                                        </div>
+                        </div>
+                        <div class="bg-surface p-8 md:p-10 rounded-2xl shadow-[0_15px_40px_rgba(44,62,71,0.04)]">
+                                <h3 class="font-headline-lg text-headline-lg text-fjord-blue mb-6"
+                                        style="font-family: 'Lora', serif;">Napište mi</h3>
+                                <form class="space-y-6" id="contact-form">
+                                        <input
             type="hidden"
             name="access_key"
             value="ba1961ed-6103-4ac7-91d3-670b2aa4142e" />
-          <label for="name">Jméno: </label>
-          <input type="text" name="name" required />
-          <label for="email">Email: </label>
-          <input type="email" name="email" required />
-          <label for="message">Zpráva: </label>
-          <textarea name="message" rows="5"></textarea>
-          <button type="submit">Odeslat</button>
-        </form>
-      </section>
-    </main>
-  </body>
+                                        <div>
+                                                <label class="block font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-2"
+                                                        for="name">Jméno</label>
+                                                <input class="w-full bg-transparent border-b border-outline-variant focus:border-fjord-blue outline-none py-2 font-body-md text-fjord-blue transition-colors rounded-none placeholder-outline-variant"
+                                                        id="name" placeholder="Vaše jméno" type="text" name="name"/>
+                                        </div>
+                                        <div>
+                                                <label class="block font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-2"
+                                                        for="email">Email</label>
+                                                <input class="w-full bg-transparent border-b border-outline-variant focus:border-fjord-blue outline-none py-2 font-body-md text-fjord-blue transition-colors rounded-none placeholder-outline-variant"
+                                                        id="email" name="email" placeholder="vas@email.cz" type="email" />
+                                        </div>
+                                        <div>
+                                                <label class="block font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-2"
+                                                        for="message">Zpráva</label>
+                                                <textarea
+                                                        class="w-full bg-transparent border-b border-outline-variant focus:border-fjord-blue outline-none py-2 font-body-md text-fjord-blue transition-colors resize-none rounded-none placeholder-outline-variant"
+                                                        id="message" name="message" placeholder="Jak vám mohu pomoci?"
+                                                        rows="4"></textarea>
+                                        </div>
+                                        <button class="bg-fjord-blue text-on-primary px-8 py-3 rounded font-label-sm uppercase tracking-wider hover:bg-primary transition-colors w-full cursor-pointer"
+                                                type="button">Odeslat zprávu</button>
+                                        <p class="text-xs text-on-surface-variant/70 mt-2">
+                                                Odesláním zprávy souhlasíte se <a href="gdpr.html" class="underline hover:text-fjord-blue transition-colors">zpracováním osobních údajů</a>.
+                                        </p>
+                                </form>
+                        </div>
+                </div>
+        </section>
+        <!-- Footer Shared Component -->
+        <footer class="bg-surface-container-low dark:bg-surface-dim w-full border-t border-outline-variant/20">
+                <div
+                        class="py-section-gap grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 items-center max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+                        <div class="text-center md:text-left space-y-2">
+                                <div class="text-xl font-semibold text-fjord-blue dark:text-on-surface"
+                                        style="font-family: 'Lora', serif;">Mgr. Lucie Marcinčínová</div>
+                                        <p class="font-body-md text-body-md text-on-surface-variant"><a
+                                                        class="hover:text-fjord-blue transition-colors"
+                                                        href="mailto:terapie.marcincinova@seznam.cz">terapie.marcincinova@seznam.cz</a></p>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Staré Buky - Prostřední Staré Buky 98, 54101</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center gap-3 font-body-md text-body-md text-center">
+                                <a class="text-on-surface-variant hover:text-fjord-blue transition-colors"
+                                        href="#o-mne">O mně</a>
+                                <a class="text-on-surface-variant hover:text-fjord-blue transition-colors"
+                                        href="#kontakt">Kontakt</a>
+                                <a class="text-on-surface-variant hover:text-fjord-blue transition-colors"
+                                        href="gdpr.html">Ochrana údajů</a>
+                        </div>
+                        <div class="font-body-md text-body-md text-on-surface-variant text-center md:text-right">
+                                <p>Nejsem poskytovatelem zdravotních služeb.</p>
+                        </div>
+                </div>
+        </footer>
+</body>
+
 </html>
