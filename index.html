@@ -161,6 +161,7 @@
                         }
                 }
         </script>
+            <script src="form.js" defer></script>
         <style>
                 body {
                         background-color: #fbf9f9;
@@ -198,10 +199,6 @@
                                         href="#o-mne">O mně</a>
                                 <a class="font-body-md text-body-md uppercase tracking-wider text-on-surface-variant hover:text-fjord-blue transition-colors duration-300 cursor-pointer"
                                         href="#kontakt">Kontakt</a>
-                        </div>
-                        <!-- Mobile Menu Icon (Visual only) -->
-                        <div class="hidden text-fjord-blue">
-                                <span class="material-symbols-outlined text-3xl">menu</span>
                         </div>
                 </div>
         </nav>
@@ -412,25 +409,29 @@
                         <div class="bg-surface p-8 md:p-10 rounded-2xl shadow-[0_15px_40px_rgba(44,62,71,0.04)]">
                                 <h3 class="font-headline-lg text-headline-lg text-fjord-blue mb-6"
                                         style="font-family: 'Lora', serif;">Napište mi</h3>
-                                <form class="space-y-6">
+                                <form class="space-y-6" id="contact-form">
+                                        <input
+            type="hidden"
+            name="access_key"
+            value="ba1961ed-6103-4ac7-91d3-670b2aa4142e" />
                                         <div>
                                                 <label class="block font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-2"
                                                         for="name">Jméno</label>
                                                 <input class="w-full bg-transparent border-b border-outline-variant focus:border-fjord-blue outline-none py-2 font-body-md text-fjord-blue transition-colors rounded-none placeholder-outline-variant"
-                                                        id="name" placeholder="Vaše jméno" type="text" />
+                                                        id="name" placeholder="Vaše jméno" type="text" name="name"/>
                                         </div>
                                         <div>
                                                 <label class="block font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-2"
                                                         for="email">Email</label>
                                                 <input class="w-full bg-transparent border-b border-outline-variant focus:border-fjord-blue outline-none py-2 font-body-md text-fjord-blue transition-colors rounded-none placeholder-outline-variant"
-                                                        id="email" placeholder="vas@email.cz" type="email" />
+                                                        id="email" name="email" placeholder="vas@email.cz" type="email" />
                                         </div>
                                         <div>
                                                 <label class="block font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-2"
                                                         for="message">Zpráva</label>
                                                 <textarea
                                                         class="w-full bg-transparent border-b border-outline-variant focus:border-fjord-blue outline-none py-2 font-body-md text-fjord-blue transition-colors resize-none rounded-none placeholder-outline-variant"
-                                                        id="message" placeholder="Jak vám mohu pomoci?"
+                                                        id="message" name="message" placeholder="Jak vám mohu pomoci?"
                                                         rows="4"></textarea>
                                         </div>
                                         <button class="bg-fjord-blue text-on-primary px-8 py-3 rounded font-label-sm uppercase tracking-wider hover:bg-primary transition-colors w-full cursor-pointer"
